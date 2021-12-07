@@ -42,7 +42,8 @@ task('grants-dao-proposal', 'proposal to fund grants dao').setAction(async (_, l
 
   const signature = 'transfer(address,address,uint256)';
 
-  const grantAmount = ethers.utils.parseUnits('11276.50', 18);
+  // $2,000,000 / 189.67 (coingecko @ 12/7/2021 1:45pm EST)
+  const grantAmount = ethers.utils.parseUnits('10544.63', 18);
   console.log(`Grant Amount (no decimals):  ${grantAmount}`);
   const encodedData = ethers.utils.defaultAbiCoder.encode(
     ['address', 'address', 'uint256'],
