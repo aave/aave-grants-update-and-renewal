@@ -10,6 +10,11 @@
  `++:           :++`  .++-           :++`    :+//+:        `++:----------`
  -/:             :/-  -/:             :/.     ://:         `/////////////-
 ```
+# Aave-Grants-Update-and-Renewal
+
+1. Complete .env file with environment variables. Make sure to include `MAINNET_FORK="true"`
+2. Review `tasks/proposal/grants-dao-proposal`
+3. run: `npm run hardhat grants-dao-proposal`
 
 # Aave Smart Contract Template Repo
 
