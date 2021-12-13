@@ -57,7 +57,7 @@ task('grants-dao-proposal', 'proposal to fund grants dao').setAction(async (_, l
   const signatures = [signature];
   const calldatas = [encodedData];
   const withDelegatecalls = [false];
-  const ipfsHash = '0x876d101db93e098b91046c83f57bcfbd4cfcc0a08af8ed460ce151920f7a69f0';
+  const ipfsHash = '0x71f844dcbbdec5423168216c396d02ac6804a0655d347bdbb6401c0b8a80ff1a';
 
   console.log('\n INPUTS:');
   console.log(`executor: ${JSON.stringify(executorAddress, null, 2)}`);
@@ -81,6 +81,7 @@ task('grants-dao-proposal', 'proposal to fund grants dao').setAction(async (_, l
     txOverrides
   );
   const createReceipt = await createTx.wait();
+  console.log(JSON.stringify(createTx, null, 2));
   const aipId = createReceipt.events[0].args.id;
 
   console.log(`aip id: ${aipId.toString()}`);
