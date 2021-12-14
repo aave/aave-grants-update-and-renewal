@@ -81,7 +81,6 @@ task('grants-dao-proposal', 'proposal to fund grants dao').setAction(async (_, l
     txOverrides
   );
   const createReceipt = await createTx.wait();
-  console.log(JSON.stringify(createTx, null, 2));
   const aipId = createReceipt.events[0].args.id;
 
   console.log(`aip id: ${aipId.toString()}`);
