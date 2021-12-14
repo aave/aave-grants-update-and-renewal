@@ -69,20 +69,21 @@ task('grants-dao-proposal', 'proposal to fund grants dao').setAction(async (_, l
   console.log(`ipfsHash: ${ipfsHash}`);
   console.log('\n');
 
-  console.log('create aip');
-  const createTx = await aaveGovernance.create(
-    executorAddress,
-    targets,
-    values,
-    signatures,
-    calldatas,
-    withDelegatecalls,
-    ipfsHash,
-    txOverrides
-  );
-  const createReceipt = await createTx.wait();
-  console.log(JSON.stringify(createTx, null, 2));
-  const aipId = createReceipt.events[0].args.id;
+  // console.log('create aip');
+  // const createTx = await aaveGovernance.create(
+  //   executorAddress,
+  //   targets,
+  //   values,
+  //   signatures,
+  //   calldatas,
+  //   withDelegatecalls,
+  //   ipfsHash,
+  //   txOverrides
+  // );
+  // const createReceipt = await createTx.wait();
+  // console.log(JSON.stringify(createTx, null, 2));
+  // const aipId = createReceipt.events[0].args.id;
+  const aipId = 52;
 
   console.log(`aip id: ${aipId.toString()}`);
 
